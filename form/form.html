@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Resizable - Default functionality</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="tabs" class="col-6 mx-auto mt-5">
+        <ul>
+            <li><a href="#tabs-1">Register</a></li>
+            <li><a href="#tabs-2">Login</a></li>
+        </ul>
+        <div id="tabs-1">
+            <form action="#" class="mt-3 mx-auto" id="register">
+                <div class="form-group form-row">
+                    <label class="col-4" for="username">User Name:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="text" name="usernameReg" id="usernameReg">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label class="col-4" for="password">Password:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="password"  id="passwordReg" name="passwordReg">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label class="col-4" for="password" type="password">Confirm Password:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="password" id="passwordConfirm" name="passwordConfirm">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label class="col-4" for="password">Email:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="text" id="email" name="email">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="button text-center mt-3">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </div>
+            </form>
+
+        </div>
+        <div id="tabs-2">
+            <form action="#" class="mt-3 mx-auto" id="login">
+                <div class="form-group form-row">
+                    <label class="col-4" for="username">User Name:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="text" id="username" name="username">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <label class="col-4" for="password">Password:</label>
+                    <div class="col-7">
+                        <input class="w-100 form-control" type="password" id="password" name="password">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="button text-center mt-3">
+                    <button class="btn btn-primary mx-auto">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="form.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs({active: 1});
+        } );
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage_user</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        #form_user {
+            border: 1px solid gray;
+            padding: 20px;
+        }
+        table, th, td {
+            margin-top: 20px;
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: cadetblue;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="#" id="form_user">
+            <h3>Users a manager</h3>
+            <!--Form-->
+            <div class="form-row">
+                <div class="col-4">
+                    <div class="form-group form-row">
+                        <label class="col-3" for="name">Name:</label>
+                        <div class="col-9">
+                            <input id="name" name="name" class="form-control" type="text" placeholder="Enter name here">
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label class="col-3" for="address">Address:</label>
+                        <div class="col-9">
+                            <input id="address" name="address" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label class="col-3" for="password">Password:</label>
+                        <div class="col-9">
+                            <input id="password" name="password" class="form-control" type="password">
+                        </div>
+                    </div>
+                </div>
+                <span class="col-1"></span>
+                <div class="col-4">
+                    <div class="form-group form-row">
+                        <label class="col-3" for="code">Code:</label>
+                        <div class="col-9">
+                            <input id="code" name="code" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label class="col-3" for="email">Email:</label>
+                        <div class="col-9">
+                            <input id="email" name="email" class="form-control" type="text" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label class="col-3" for="username">Username:</label>
+                        <div class="col-9">
+                            <input id="username" name="username" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Button-->
+            <div class="form-row">
+                <button id="add" type="button" class="btn btn-success">Add</button>
+                <button id="delete" type="button" class="btn btn-danger ml-2">Delete</button>
+                <button id="edit" type="button" class="btn btn-info ml-2">Edit</button>
+                <button id="save" type="submit" class="btn btn-primary ml-2">Save</button>
+                <button id="exit" type="button" class="btn btn-warning ml-2">Exit</button>
+            </div>
+
+            <!--Show-->
+            <table id="table" class="table-hover">
+                <thead id="thead">
+                    <tr>
+                        <th></th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>user Name</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="manage_user.js"></script>
+</body>
+</html>
